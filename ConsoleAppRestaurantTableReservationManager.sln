@@ -1,0 +1,18 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.246
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E0BFAF3A-5F13-4C39-B3BC-55C597C49B9D}") = "ConsoleAppRestaurantTableReservationManager", "ConsoleAppRestaurantTableReservationManager.csproj", "{D0EBA78F-FC29-4C22-87C6-39F9236A8A1A}"
+EndProject
+Global
+  GlobalSection(SolutionConfigurationPlatforms) = preSolution
+    Debug|Any CPU = Debug|Any CPU
+    Release|Any CPU = Release|Any CPU
+  EndGlobalSection
+  GlobalSection(ProjectConfigurationPlatforms) = postSolution
+    {D0EBA78F-FC29-4C22-87C6-39F9236A8A1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+    {D0EBA78F-FC29-4C22-87C6-39F9236A8A1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+    {D0EBA78F-FC29-4C22-87C6-39F9236A8A1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+    {D0EBA78F-FC29-4C22-87C6-39F9236A8A1A}.Release|Any CPU.Build.0 = Release|Any CPU
+  EndGlobalSection
+EndGlobal
