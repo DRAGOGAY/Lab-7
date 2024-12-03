@@ -26,11 +26,11 @@ public class TableReservationApplication
 // Reservation Manager Class
 public class ReservationManager
 {
-    private readonly List<Restaurant> _restaurants;
+    private readonly Dictionary<string, Restaurant> _restaurants;
 
     public ReservationManager()
     {
-        _restaurants = new List<Restaurant>();
+        _restaurants = new Dictionary<string, Restaurant>();
     }
 
     public void AddRestaurant(string name, int tableCount)
@@ -41,7 +41,7 @@ public class ReservationManager
                 throw new ArgumentException("Invalid restaurant details.");
 
             var restaurant = new Restaurant(name, tableCount);
-            _restaurants.Add(restaurant);
+            _restaurants[name] = restaurant;  // Добавление или обновление ресторана по имени
             Console.WriteLine($"Restaurant '{name}' added successfully.");
         }
         catch (Exception ex)
@@ -54,13 +54,13 @@ public class ReservationManager
     {
         try
         {
-            var restaurant = _restaurants.Find(r => r.Name == restaurantName);
-            if (restaurant == null)
+            if (!_restaurants.ContainsKey(restaurantName))
             {
                 Console.WriteLine($"Restaurant '{restaurantName}' not found.");
                 return false;
             }
 
+            var restaurant = _restaurants[restaurantName];
             return restaurant.BookTable(date, tableNumber);
         }
         catch (Exception ex)
