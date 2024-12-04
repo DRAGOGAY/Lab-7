@@ -12,7 +12,6 @@ public class TableReservationApplication
             reservationManager.AddRestaurant("Restaurant A", 10);
             reservationManager.AddRestaurant("Restaurant B", 5);
 
-            // Попытка забронировать столы
             Console.WriteLine(reservationManager.BookTable("Restaurant A", new DateTime(2023, 12, 25), 3)); // True
             Console.WriteLine(reservationManager.BookTable("Restaurant A", new DateTime(2023, 12, 25), 3)); // False
         }
@@ -41,7 +40,7 @@ public class ReservationManager
                 throw new ArgumentException("Invalid restaurant details.");
 
             var restaurant = new Restaurant(name, tableCount);
-            _restaurants[name] = restaurant;  // Добавление или обновление ресторана по имени
+            _restaurants[name] = restaurant;  
             Console.WriteLine($"Restaurant '{name}' added successfully.");
         }
         catch (Exception ex)
