@@ -12,8 +12,8 @@ public class TableReservationApplication
             reservationManager.AddRestaurant("Restaurant A", 10);
             reservationManager.AddRestaurant("Restaurant B", 5);
 
-            Console.WriteLine(reservationManager.BookTable("Restaurant A", new DateTime(2023, 12, 25), 3)); // True
-            Console.WriteLine(reservationManager.BookTable("Restaurant A", new DateTime(2023, 12, 25), 3)); // False
+            Console.WriteLine(reservationManager.BookTable("Restaurant A", new DateTime(2023, 12, 25), 3)); 
+            Console.WriteLine(reservationManager.BookTable("Restaurant A", new DateTime(2023, 12, 25), 3)); 
         }
         catch (Exception ex)
         {
